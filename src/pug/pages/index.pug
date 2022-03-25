@@ -230,17 +230,54 @@ block main
 								.quiz__title Количество кредиторов?
 								.quiz__list
 									label.quiz__radio
-										input(type="radio" name="step1" value="1")
+										input(type="radio" name="step1" value="1" required)
 										.quiz__radio-icon
 										.quiz__radio-label от 2-ух до 3-ёх
 									label.quiz__radio
-										input(type="radio" name="step1" value="2")
+										input(type="radio" name="step1" value="2" required)
 										.quiz__radio-icon
 										.quiz__radio-label от 3-ёх до 5-ти
 									label.quiz__radio
-										input(type="radio" name="step1" value="3")
+										input(type="radio" name="step1" value="3" required)
 										.quiz__radio-icon
 										.quiz__radio-label от 5-ти до 10-ти
+							.quiz__step
+								.quiz__title Сумма вашего долга?
+								.quiz__list
+									label.quiz__radio
+										input(type="radio" name="step2" value="1" required)
+										.quiz__radio-icon
+										.quiz__radio-label до 1 млн.
+									label.quiz__radio
+										input(type="radio" name="step2" value="2" required)
+										.quiz__radio-icon
+										.quiz__radio-label от 1 млн до  3 млн
+									label.quiz__radio
+										input(type="radio" name="step2" value="3" required)
+										.quiz__radio-icon
+										.quiz__radio-label больше 3 млн
+							.quiz__step
+								.quiz__title Есть ли имущество у вас и у супруга/супруги?
+								.quiz__list
+									label.quiz__radio
+										input(type="radio" name="step3" value="1" required)
+										.quiz__radio-icon
+										.quiz__radio-label Да
+									label.quiz__radio
+										input(type="radio" name="step3" value="2" required)
+										.quiz__radio-icon
+										.quiz__radio-label Нет
+							.quiz__step
+								.quiz__title Были ли у вас (у супруга/супруги) сделки с имуществом за последние три года?
+								.quiz__list
+									label.quiz__radio
+										input(type="radio" name="step4" value="1" required)
+										.quiz__radio-icon
+										.quiz__radio-label Да
+									label.quiz__radio
+										input(type="radio" name="step4" value="2" required)
+										.quiz__radio-icon
+										.quiz__radio-label Нет
 							.quiz__result
 								.quiz__result-title Стоимость вашей процедуры составит:
 								.quiz__result-sum 130 000 рублей
@@ -264,9 +301,10 @@ block main
 								.form__input-placeholder Ваш телефон
 
 							.form__row
-								buttton.form__button(type="submit") ОТПРАВИТЬ ЗАЯВКУ
+								button.form__button(type="submit") ОТПРАВИТЬ ЗАЯВКУ
 
 						.s8__block-succes Заявка отправлена
 
-		.s8__ball.s8__ball-1.ball
-		.s8__ball.s8__ball-2.ball
+
+		.s8__ball.s8__ball--1.ball
+		.s8__ball.s8__ball--2.ball

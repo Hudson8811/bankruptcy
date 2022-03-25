@@ -265,19 +265,69 @@
                       <div class="quiz__title">Количество кредиторов?</div>
                       <div class="quiz__list">
                         <label class="quiz__radio">
-                          <input type="radio" name="step1" value="1">
+                          <input type="radio" name="step1" value="1" required>
                           <div class="quiz__radio-icon"></div>
                           <div class="quiz__radio-label">от 2-ух до 3-ёх</div>
                         </label>
                         <label class="quiz__radio">
-                          <input type="radio" name="step1" value="2">
+                          <input type="radio" name="step1" value="2" required>
                           <div class="quiz__radio-icon"></div>
                           <div class="quiz__radio-label">от 3-ёх до 5-ти</div>
                         </label>
                         <label class="quiz__radio">
-                          <input type="radio" name="step1" value="3">
+                          <input type="radio" name="step1" value="3" required>
                           <div class="quiz__radio-icon"></div>
                           <div class="quiz__radio-label">от 5-ти до 10-ти</div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="quiz__step">
+                      <div class="quiz__title">Сумма вашего долга?</div>
+                      <div class="quiz__list">
+                        <label class="quiz__radio">
+                          <input type="radio" name="step2" value="1" required>
+                          <div class="quiz__radio-icon"></div>
+                          <div class="quiz__radio-label">до 1 млн.</div>
+                        </label>
+                        <label class="quiz__radio">
+                          <input type="radio" name="step2" value="2" required>
+                          <div class="quiz__radio-icon"></div>
+                          <div class="quiz__radio-label">от 1 млн до  3 млн</div>
+                        </label>
+                        <label class="quiz__radio">
+                          <input type="radio" name="step2" value="3" required>
+                          <div class="quiz__radio-icon"></div>
+                          <div class="quiz__radio-label">больше 3 млн</div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="quiz__step">
+                      <div class="quiz__title">Есть ли имущество у вас и у супруга/супруги?</div>
+                      <div class="quiz__list">
+                        <label class="quiz__radio">
+                          <input type="radio" name="step3" value="1" required>
+                          <div class="quiz__radio-icon"></div>
+                          <div class="quiz__radio-label">Да</div>
+                        </label>
+                        <label class="quiz__radio">
+                          <input type="radio" name="step3" value="2" required>
+                          <div class="quiz__radio-icon"></div>
+                          <div class="quiz__radio-label">Нет</div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="quiz__step">
+                      <div class="quiz__title">Были ли у вас (у супруга/супруги) сделки с имуществом за последние три года?</div>
+                      <div class="quiz__list">
+                        <label class="quiz__radio">
+                          <input type="radio" name="step4" value="1" required>
+                          <div class="quiz__radio-icon"></div>
+                          <div class="quiz__radio-label">Да</div>
+                        </label>
+                        <label class="quiz__radio">
+                          <input type="radio" name="step4" value="2" required>
+                          <div class="quiz__radio-icon"></div>
+                          <div class="quiz__radio-label">Нет</div>
                         </label>
                       </div>
                     </div>
@@ -311,7 +361,7 @@
                       <div class="form__input-placeholder">Ваш телефон</div>
                     </div>
                     <div class="form__row">
-                      <buttton class="form__button" type="submit">ОТПРАВИТЬ ЗАЯВКУ</buttton>
+                      <button class="form__button" type="submit">ОТПРАВИТЬ ЗАЯВКУ</button>
                     </div>
                   </form>
                   <div class="s8__block-succes">Заявка отправлена</div>
@@ -319,8 +369,8 @@
               </div>
             </div>
           </div>
-          <div class="s8__ball s8__ball-1 ball"></div>
-          <div class="s8__ball s8__ball-2 ball"></div>
+          <div class="s8__ball s8__ball--1 ball"></div>
+          <div class="s8__ball s8__ball--2 ball"></div>
         </div>
       </main>
       <footer class="footer" id="contacts">

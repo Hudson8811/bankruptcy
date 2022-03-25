@@ -962,6 +962,7 @@ body {
 }
 
 .s8{
+	position: relative;
 	padding: 65px 0 65px;
 	@include max(sm){
 		padding: vw(30) vw(5);
@@ -1047,6 +1048,35 @@ body {
 			@include max(sm){
 				padding: vw(30) 0;
 				font-size: vw(32);
+			}
+		}
+	}
+
+	&__ball{
+		&--1{
+			width: 282px;
+			height: 282px;
+			left: 57px;
+			top: -40px;
+			z-index: -1;
+			@include max(sm){
+				width: vw(130);
+				height: vw(130);
+				left: vw(-63);
+				top: vw(-35);
+			}
+		}
+		&--2{
+			width: 298px;
+			height: 298px;
+			right: -35px;
+			bottom: -144px;
+			z-index: 1;
+			@include max(sm){
+				width: vw(140);
+				height: vw(140);
+				right: vw(-50);
+				bottom: vw(-40);
 			}
 		}
 	}
@@ -1160,6 +1190,8 @@ body {
 		letter-spacing: normal;
 		padding: 19px;
 		cursor: pointer;
+		border: none;
+		outline: none;
 		@include max(sm){
 			border-radius: vw(15);
 			font-size: vw(21);
@@ -1171,6 +1203,7 @@ body {
 		&:active{
 			transform: translateY(3px);
 			box-shadow: none;
+			outline: none;
 		}
 	}
 }
@@ -1315,6 +1348,8 @@ body {
 			width: max-content;
 			line-height: 1;
 			z-index: 2;
+			margin-left: auto;
+			margin-right: auto;
 			@include max(sm){
 				font-size: vw(34);
 			}
