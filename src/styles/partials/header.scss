@@ -1,0 +1,137 @@
+.header{
+	&__content{
+		padding: 60px 140px 0 126px;
+		@include max(lg){
+			padding: 30px 30px 0;
+		}
+		@include max(sm){
+			padding: vw(20) vw(20) 0;
+			position: relative;
+		}
+
+	}
+	&__top{
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+	&__left{}
+	&__right{
+		display: flex;
+		align-items: flex-start;
+	}
+	&__logo{
+		@include max(lg){
+			width: 150px;
+		}
+		@include max(sm){
+			width: vw(100);
+		}
+	}
+	&__info{
+		display: flex;
+		align-items: center;
+		@include max(sm){
+			display: none;
+		}
+		&-item{
+			display: flex;
+			margin-right: 60px;
+		}
+		&-img{
+			margin-right: 8px;
+			img{}
+		}
+		&-text{
+			color: #ffffff;
+			font-size: 34px;
+			font-weight: 400;
+			font-style: normal;
+			letter-spacing: normal;
+			line-height: 0.7;
+			text-decoration: underline;
+		}
+	}
+	&__menu{
+		position: relative;
+		@include max(sm){
+			position: static;
+		}
+	}
+	&__burger{
+		width: 51px;
+		height: 35px;
+		cursor: pointer;
+		background: url(../images/burder.png) center center no-repeat;
+		background-size: contain;
+		@include max(sm){
+			width: vw(30);
+			height: vw(21);
+		}
+	}
+	&__mainmenu{
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+}
+
+.mainmenu{
+	display: none;
+	align-items: center;
+	box-shadow: 0 16px 13px rgba(0, 0, 0, 0.2);
+	border-radius: 26px 0 26px 26px;
+	background-color: #ffffff;
+	padding: 24px 63px 26px 38px;
+	@include max(sm){
+		padding: vw(20) vw(35);
+		flex-direction: column;
+		width: 100%;
+		border-radius: 0 0 26px 26px;
+		align-items: flex-start;
+	}
+	&.active{
+		display: flex;
+	}
+	&__item{
+		display: flex;
+		align-items: center;
+		a{
+			color: $blue;
+			font-size: 35px;
+			font-weight: 700;
+			font-style: normal;
+			letter-spacing: normal;
+			line-height: 1;
+			display: block;
+			padding: 0 8px;
+			text-decoration: none;
+			transition: color 0.3s;
+			@include max(sm){
+				font-size: vw(35);
+				padding: 0 vw(8);
+			}
+			&:hover{
+				color: $greenBtn;
+			}
+		}
+		&::before{
+			content: "";
+			width: 3px;
+			height: 26px;
+			background-color: $greenBtn;
+			display: block;
+			@include max(sm){
+				width: vw(3);
+				height: vw(26);
+			}
+		}
+		+.mainmenu__item{
+			margin-left: 28px;
+			@include max(sm){
+				margin-left: 0;
+				margin-top: vw(10);
+			}
+		}
+	}
+}

@@ -1,0 +1,38 @@
+@font-face {
+	font-family: 'DIN Pro Cond';
+	src: local('DIN Pro Condensed Bold'), local('DINPro-CondensedBold'),
+	url('../fonts/DINPro-CondensedBold.woff2') format('woff2'),
+	url('../fonts/DINPro-CondensedBold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'DIN Pro Cond';
+	src: local('DIN Pro Condensed Black'), local('DINPro-CondensedBlack'),
+	url('../fonts/DINPro-CondensedBlack.woff2') format('woff2'),
+	url('../fonts/DINPro-CondensedBlack.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+}
+
+
+
+@font-face {
+	font-family: 'DIN Pro Cond';
+	src: local('DIN Pro Condensed Medium'), local('DINPro-CondensedMedium'),
+	url('../fonts/DINPro-CondensedMedium.woff2') format('woff2'),
+	url('../fonts/DINPro-CondensedMedium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'DIN Pro Cond';
+	src: local('DIN Pro Condensed Regular'), local('DINPro-CondensedRegular'),
+	url('../fonts/DINPro-CondensedRegular.woff2') format('woff2'),
+	url('../fonts/DINPro-CondensedRegular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
