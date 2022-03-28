@@ -17,7 +17,9 @@ body {
 	width: 1380px;
 	max-width: 100%;
 	margin: 0 auto;
-	
+	@include min(xl){
+		width: fw(1380);
+	}
 }
 
 
@@ -37,6 +39,9 @@ body {
 	@include max(sm){
 		padding-bottom: vw(30);
 	}
+	@include min(xl){
+		padding-bottom: fw(55);
+	}
 	&__bg{
 		width: 100%;
 		height: 1193px;
@@ -48,7 +53,6 @@ body {
 		background: url(../images/1920.jpg) center top no-repeat;
 		background-size: cover;
 		box-sizing: border-box;
-		max-height: 1236px;
 		@include min(xl){
 			background-image: url(../images/2560.jpg);
 			height: auto;
@@ -82,6 +86,14 @@ body {
 		margin-left: 128px;
 		min-height: 261px;
 
+		@include min(xl){
+			padding-top: fw(73);
+			font-size: fw(92);
+			line-height: fw(87);
+			margin-left: fw(128);
+			min-height: fw(261);
+		}
+
 		@include max(lg){
 			font-size: 7.3vw;
 			line-height: 8vw;
@@ -105,6 +117,12 @@ body {
 		margin-right: 140px;
 		margin-left: auto;
 		width: 528px;
+		@include min(xl){
+			margin-top: fw(219);
+			margin-right: fw(140);
+			width: fw(528);
+		}
+
 		@include max(lg){
 			margin-top: 15vw;
 			margin-right: 60px;
@@ -125,6 +143,9 @@ body {
 			@include max(sm){
 				font-size: vw(28);
 			}
+			@include min(xl){
+				font-size: fw(28);
+			}
 		}
 		&-staf{
 			color: $blue;
@@ -135,6 +156,9 @@ body {
 			@include max(sm){
 				font-size: vw(25);
 			}
+			@include min(xl){
+				font-size: fw(25);
+			}
 		}
 	}
 	&__content{
@@ -142,6 +166,12 @@ body {
 		margin-left: auto;
 		width: 528px;
 		margin-top: 54px;
+
+		@include min(xl){
+			margin-right: fw(140);
+			width: fw(528);
+			margin-top: fw(54);
+		}
 
 		@include max(lg){
 			margin-top: 10vw;
@@ -169,6 +199,9 @@ body {
 				font-size: vw(34);
 				text-align: left;
 			}
+			@include min(xl){
+				font-size: fw(51);
+			}
 		}
 		&-text{
 			margin-top: 25px;
@@ -181,6 +214,11 @@ body {
 				font-size: vw(19);
 				line-height: vw(28);
 			}
+			@include min(xl){
+				margin-top: fw(25);
+				font-size: fw(21);
+				line-height: fw(36);
+			}
 		}
 	}
 }
@@ -190,7 +228,12 @@ body {
 	padding-bottom: 82px;
 	padding-left: 140px;
 	padding-right: 87px;
-
+	@include min(xl){
+		padding-top: fw(55);
+		padding-bottom: fw(82);
+		padding-left: fw(140);
+		padding-right: fw(87);
+	}
 	@include max(lg){
 		padding-left: 30px;
 		padding-right: 30px;
@@ -210,11 +253,17 @@ body {
 		@include max(lg){
 			width: 100%;
 		}
+		@include min(xl){
+			width: calc(100% - 20.83vw);
+		}
 	}
 	&__right{
 		width: 388px;
 		@include max(lg){
 			width: 100%;
+		}
+		@include min(xl){
+			width: fw(388);
 		}
 	}
 	&__title{
@@ -223,6 +272,10 @@ body {
 		font-weight: 900;
 		line-height: 1;
 		max-width: 700px;
+		@include min(xl){
+			font-size: fw(51);
+			max-width: fw(700);
+		}
 		@include max(sm){
 			font-size: vw(34);
 		}
@@ -232,7 +285,10 @@ body {
 		flex-wrap: wrap;
 		margin-top: 71px;
 		max-width: 700px;
-
+		@include min(xl){
+			margin-top: fw(71);
+			max-width: fw(700);
+		}
 		@include max(lg){
 			justify-content: center;
 			margin-left: auto;
@@ -247,6 +303,11 @@ body {
 		margin-bottom: 12px;
 		position: relative;
 		height: 212px;
+		@include min(xl){
+			width: fw(290);
+			margin-bottom: fw(12);
+			height: fw(212);
+		}
 		@include max(sm){
 			width: 100%;
 			margin-bottom: vw(12);
@@ -254,6 +315,9 @@ body {
 		}
 		&:nth-child(even){
 			margin-left: 65px;
+			@include min(xl){
+				margin-left: fw(65);
+			}
 			@include max(sm){
 				margin-left: 0;
 			}
@@ -263,6 +327,9 @@ body {
 			font-size: 40px;
 			font-weight: 500;
 			line-height: 1;
+			@include min(xl){
+				font-size: fw(40);
+			}
 			@include max(sm){
 				font-size: vw(30);
 			}
@@ -273,6 +340,10 @@ body {
 			font-weight: 400;
 			line-height: 1;
 			margin-top: 15px;
+			@include min(xl){
+				font-size: fw(25);
+				margin-top: fw(15);
+			}
 			@include max(sm){
 				font-size: vw(22);
 			}
@@ -287,6 +358,11 @@ body {
 				max-width: 100%;
 				max-height: 100%;
 			}
+			@include min(xl){
+				left: fw(110);
+				max-width: fw(121);
+				max-height: fw(121);
+			}
 			@include max(sm){
 				left:auto !important;
 				right: vw(20);
@@ -298,23 +374,37 @@ body {
 		&:nth-child(1){
 			.s2__item-img{
 				bottom: 6px;
+				@include min(xl){
+					bottom: fw(6);
+				}
 			}
 		}
 		&:nth-child(2){
 			.s2__item-img{
 				bottom: 6px;
 				left: 97px;
+				@include min(xl){
+					bottom: fw(6);
+					left: fw(97);
+				}
 			}
 		}
 		&:nth-child(3){
 			.s2__item-img{
 				left: 100px;
+				@include min(xl){
+					left: fw(100);
+				}
 			}
 		}
 		&:nth-child(4){
 			.s2__item-img{
 				left: 108px;
 				bottom: 4px;
+				@include min(xl){
+					left: fw(108);
+					bottom: fw(4);
+				}
 			}
 		}
 	}
@@ -333,6 +423,12 @@ body {
 		margin-left: 12px;
 		margin-right: 12px;
 		margin-top: 33px;
+		@include min(xl){
+			max-width: fw(319);
+			margin-left: fw(12);
+			margin-right: fw(12);
+			margin-top: fw(33);
+		}
 		@include max(lg){
 			margin-left: auto;
 			margin-right: auto;
@@ -359,6 +455,11 @@ body {
 		transition: 0.3s;
 		box-shadow: 0 3px 0 $greenBtn2;
 		user-select: none;
+		@include min(xl){
+			font-size: fw(38);
+			padding: fw(23) fw(10) fw(23);
+			border-radius: fw(5);
+		}
 		@include max(sm){
 			font-size: vw(24);
 			padding: vw(20) vw(10);
@@ -377,7 +478,9 @@ body {
 	padding: 61px 140px 68px;
 	background: url(../images/steps_bg.jpg) center center no-repeat;
 	background-size: cover;
-
+	@include min(xl){
+		padding: fw(61) fw(140) fw(68);
+	}
 	@include max(lg){
 		padding: 61px 30px 68px;
 	}
@@ -389,6 +492,9 @@ body {
 		font-size: 80px;
 		font-weight: 700;
 		line-height: 1;
+		@include min(xl){
+			font-size: fw(80);
+		}
 		@include max(lg){
 			font-size: 70px;
 		}
@@ -400,6 +506,9 @@ body {
 		margin-top: 57px;
 		display: flex;
 		justify-content: space-between;
+		@include min(xl){
+			margin-top: fw(57);
+		}
 		@include max(md){
 			flex-wrap: wrap;
 		}
@@ -410,6 +519,9 @@ body {
 	&__item{
 		position: relative;
 		width: 239px;
+		@include min(xl){
+			width: fw(239);
+		}
 		@include max(md){
 			width: calc(50% - 25px);
 			margin-bottom: 50px;
@@ -428,6 +540,10 @@ body {
 			height: 100%;
 			border: 2px dashed #aadc89;
 			z-index: 1;
+			@include min(xl){
+				left: fw(14);
+				top: fw(16);
+			}
 		}
 		&-inner{
 			position: relative;
@@ -437,6 +553,10 @@ body {
 			height: 100%;
 			min-height: 313px;
 			padding: 23px 13px;
+			@include min(xl){
+				min-height: fw(313);
+				padding: fw(23) fw(13);
+			}
 			@include max(md){
 				min-height: 200px;
 			}
@@ -462,6 +582,12 @@ body {
 			font-weight: 700;
 			line-height: 1;
 			font-size: 40px;
+			@include min(xl){
+				width: fw(43);
+				height: fw(43);
+				margin-right: fw(12);
+				font-size: fw(40);
+			}
 			@include max(sm){
 				width: vw(43);
 				height: vw(43);
@@ -474,6 +600,11 @@ body {
 			font-weight: 500;
 			line-height: 22.88px;
 			min-height: 92px;
+			@include min(xl){
+				font-size: fw(27);
+				line-height: fw(22.88);
+				min-height: fw(92);
+			}
 			@include max(sm){
 				min-height: 0;
 				font-size: vw(25);
@@ -486,6 +617,12 @@ body {
 			font-weight: 400;
 			line-height: 25px;
 			padding: 0 6px;
+			@include min(xl){
+				margin-top: fw(10);
+				font-size: fw(21);
+				line-height: fw(25);
+				padding: 0 fw(6);
+			}
 			@include max(sm){
 				margin-top: vw(15);
 				font-size: vw(19);
@@ -503,6 +640,9 @@ body {
 	.container{
 		position: relative;
 		padding: 73px 0 75px;
+		@include min(xl){
+			padding: fw(73) 0 fw(75);
+		}
 		@include max(sm){
 			padding: vw(30);
 		}
@@ -516,6 +656,10 @@ body {
 		padding-right: 10px;
 		position: relative;
 		z-index: 2;
+		@include min(xl){
+			font-size: fw(90);
+			padding-right: fw(10);
+		}
 		@include max(lg){
 			font-size: 70px;
 			padding-right: 0;
@@ -533,11 +677,19 @@ body {
 		margin: 0 auto;
 		position: relative;
 		z-index: 2;
+		@include min(xl){
+			width: fw(1030);
+		}
 	}
 	&__item{
 		margin-top: 59px;
 		width: 510px;
 		padding: 0 30px;
+		@include min(xl){
+			margin-top: fw(59);
+			width: fw(510);
+			padding: 0 fw(30);
+		}
 		@include max(md){
 			width: 50%;
 		}
@@ -555,6 +707,9 @@ body {
 			flex-shrink: 0;
 			width: 90px;
 			position: relative;
+			@include min(xl){
+				width: fw(90);
+			}
 			@include max(sm){
 				width: vw(50);
 			}
@@ -570,6 +725,12 @@ body {
 				left: 10px;
 				top: 5px;
 				z-index: -1;
+				@include min(xl){
+					width: fw(58);
+					height: fw(59);
+					left: fw(10);
+					top: fw(5);
+				}
 				@include max(sm){
 					width: vw(35);
 					height: vw(35);
@@ -580,6 +741,10 @@ body {
 			img{
 				max-width: 63px;
 				max-height: 63px;
+				@include min(xl){
+					max-width: fw(63);
+					max-height: fw(63);
+				}
 				@include max(sm){
 					max-width: vw(40);
 					max-height: vw(40);
@@ -590,6 +755,9 @@ body {
 			font-size: 27px;
 			font-weight: 500;
 			line-height: 1;
+			@include min(xl){
+				font-size: fw(27);
+			}
 			@include max(sm){
 				font-size: vw(21);
 			}
@@ -603,6 +771,12 @@ body {
 			left: -63px;
 			top: -35px;
 			z-index: 1;
+			@include min(xl){
+				width: fw(282);
+				height: fw(282);
+				left: fw(-63);
+				top: fw(-35);
+			}
 			@include max(sm){
 				width: vw(130);
 				height: vw(130);
@@ -615,6 +789,12 @@ body {
 			height: 125px;
 			right: 128px;
 			top: 206px;
+			@include min(xl){
+				width: fw(125);
+				height: fw(125);
+				right: fw(128);
+				top: fw(206);
+			}
 			@include max(sm){
 				width: vw(100);
 				height: vw(100);
@@ -627,6 +807,12 @@ body {
 			height: 184px;
 			left: 459px;
 			bottom: -39px;
+			@include min(xl){
+				width: fw(184);
+				height: fw(184);
+				left: fw(459);
+				bottom: fw(-39);
+			}
 			@include max(sm){
 				display: none;
 			}
@@ -642,6 +828,9 @@ body {
 	.container{
 		padding: 76px 0 60px;
 		position: relative;
+		@include min(xl){
+			padding: fw(76) 0 fw(60);
+		}
 		@include max(sm){
 			padding: vw(30) 0;
 		}
@@ -653,6 +842,11 @@ body {
 		font-weight: 700;
 		line-height: 57.99px;
 		margin-left: 170px;
+		@include min(xl){
+			font-size: fw(74);
+			line-height: fw(57.99);
+			margin-left: fw(170);
+		}
 		@include max(lg){
 			font-size: 70px;
 			margin-left: 30px;
@@ -665,6 +859,9 @@ body {
 		span{
 			display: block;
 			max-width: 680px;
+			@include min(xl){
+				max-width: fw(680);
+			}
 		}
 		&::after{
 			content: "";
@@ -676,6 +873,11 @@ body {
 			z-index: -1;
 			left: 229px;
 			top: 19px;
+			@include min(xl){
+				height: fw(75);
+				left: fw(229);
+				top: fw(19);
+			}
 			@include max(sm){
 				width: 80%;
 				left: auto;
@@ -688,6 +890,10 @@ body {
 	&__items{
 		margin-top: 62px;
 		padding: 0 150px 0 170px;
+		@include min(xl){
+			margin-top: fw(62);
+			padding: 0 fw(150) 0 fw(170);
+		}
 		@include max(lg){
 			padding: 0 30px;
 		}
@@ -699,6 +905,9 @@ body {
 	&__item{
 		+.s5__item{
 			margin-top: 59px;
+			@include min(xl){
+				margin-top: fw(59);
+			}
 			@include max(sm){
 				margin-top: vw(35);
 			}
@@ -706,6 +915,9 @@ body {
 		&-top{
 			display: flex;
 			padding-left: 9px;
+			@include min(xl){
+				padding-left: fw(9);
+			}
 			@include max(sm){
 				padding-left: vw(5);
 			}
@@ -718,6 +930,12 @@ body {
 			background: url(../images/i_check.png) center center no-repeat;
 			background-size: contain;
 			margin-right: 8px;
+			@include min(xl){
+				width: fw(31);
+				height: fw(26);
+				margin-top: fw(14);
+				margin-right: fw(8);
+			}
 			@include max(sm){
 				width: vw(25);
 				height: vw(20);
@@ -729,6 +947,9 @@ body {
 			font-size: 50px;
 			font-weight: 500;
 			line-height: 1;
+			@include min(xl){
+				font-size: fw(50);
+			}
 			@include max(sm){
 				font-size: vw(30);
 			}
@@ -742,6 +963,12 @@ body {
 			letter-spacing: normal;
 			line-height: 1;
 			margin-top: 17px;
+			@include min(xl){
+				border-radius: fw(5);
+				padding: fw(23) fw(22) fw(23) fw(32);
+				font-size: fw(27);
+				margin-top: fw(17);
+			}
 			@include max(sm){
 				font-size: vw(21);
 				margin-top: vw(15);
@@ -759,6 +986,12 @@ body {
 		right: 8px;
 		top: 610px;
 		z-index: -1;
+		@include min(xl){
+			width: fw(396);
+			height: fw(323);
+			right: fw(8);
+			top: fw(610);
+		}
 
 		@include max(sm){
 			width: vw(200);
@@ -774,6 +1007,9 @@ body {
 	.container{
 		padding: 60px 0 69px;
 		position: relative;
+		@include min(xl){
+			padding: fw(60) 0 fw(69);
+		}
 		@include max(sm){
 			padding: vw(30) 0;
 		}
@@ -785,6 +1021,11 @@ body {
 		font-weight: 700;
 		line-height: 57.99px;
 		margin-left: 170px;
+		@include min(xl){
+			font-size: fw(74);
+			line-height: fw(57.99);
+			margin-left: fw(170);
+		}
 		@include max(lg){
 			font-size: 70px;
 			margin-left: 30px;
@@ -797,6 +1038,9 @@ body {
 		span{
 			display: block;
 			max-width: 680px;
+			@include min(xl){
+				max-width: fw(680);
+			}
 		}
 		&::after{
 			content: "";
@@ -808,6 +1052,12 @@ body {
 			z-index: -1;
 			left: 229px;
 			top: 19px;
+			@include min(xl){
+				width: fw(100);
+				height: fw(75);
+				left: fw(229);
+				top: fw(19);
+			}
 			@include max(sm){
 				width: 80%;
 				left: auto;
@@ -820,6 +1070,10 @@ body {
 	&__items{
 		margin-top: 60px;
 		padding: 0 150px 0 180px;
+		@include min(xl){
+			margin-top: fw(60);
+			padding: 0 fw(150) 0 fw(180);
+		}
 		@include max(lg){
 			padding: 0 30px;
 		}
@@ -832,6 +1086,9 @@ body {
 		display: flex;
 		+.s6__item{
 			margin-top: 65px;
+			@include min(xl){
+				margin-top: fw(65);
+			}
 			@include max(sm){
 				margin-top: vw(35);
 			}
@@ -843,6 +1100,11 @@ body {
 			margin-right: 9px;
 			background: url(../images/i_cross.png) center center no-repeat;
 			background-size: contain;
+			@include min(xl){
+				width: fw(30);
+				height: fw(28);
+				margin-right: fw(9);
+			}
 			@include max(sm){
 				width: vw(25);
 				height: vw(20);
@@ -853,6 +1115,9 @@ body {
 			font-size: 37px;
 			font-weight: 500;
 			line-height: 1;
+			@include min(xl){
+				font-size: fw(37);
+			}
 			@include max(lg){
 				br{
 					display: none;
@@ -872,6 +1137,12 @@ body {
 		left: -52px;
 		top: 262px;
 		z-index: -1;
+		@include min(xl){
+			width: fw(368);
+			height: fw(368);
+			left: fw(-52);
+			top: fw(262);
+		}
 		@include max(sm){
 			width: vw(200);
 			height: vw(200);
@@ -883,6 +1154,9 @@ body {
 
 .s7{
 	padding: 69px 0 65px;
+	@include min(xl){
+		padding: fw(69) 0 fw(65);
+	}
 	@include max(sm){
 		padding: vw(30) 0;
 	}
@@ -892,6 +1166,9 @@ body {
 		font-size: 74px;
 		font-weight: 700;
 		line-height: 1;
+		@include min(xl){
+			font-size: fw(74);
+		}
 		@include max(lg){
 			font-size: 70px;
 		}
@@ -903,6 +1180,9 @@ body {
 		margin-top: 60px;
 		display: flex;
 		justify-content: center;
+		@include min(xl){
+			margin-top: fw(60);
+		}
 		@include max(md){
 			justify-content: space-around;
 		}
@@ -919,8 +1199,14 @@ body {
 		flex-direction: column;
 		width: 260px;
 		text-align: center;
+		@include min(xl){
+			width: fw(260);
+		}
 		+.s7__item{
 			margin-left: 120px;
+			@include min(xl){
+				margin-left: fw(120);
+			}
 			@include max(md){
 				margin-left: 0;
 			}
@@ -934,6 +1220,11 @@ body {
 			height: 313px;
 			box-shadow: 0 5px 12px #8E9AA5;
 			border-radius: 5px;
+			@include min(xl){
+				width: fw(239);
+				height: fw(313);
+				border-radius: fw(5);
+			}
 			@include max(sm){
 				width: vw(239);
 				height: vw(313);
@@ -956,6 +1247,11 @@ body {
 				left: 14px;
 				top: 16px;
 				z-index: -1;
+				@include min(xl){
+					border-radius: fw(5);
+					left: fw(14);
+					top: fw(16);
+				}
 			}
 		}
 		&-content{
@@ -963,6 +1259,11 @@ body {
 			color: $blue;
 			font-size: 23px;
 			line-height: 26.2px;
+			@include min(xl){
+				margin-top: fw(30);
+				font-size: fw(23);
+				line-height: fw(26.2);
+			}
 			@include max(sm){
 				margin-top: vw(20);
 				font-size: vw(21);
@@ -986,6 +1287,11 @@ body {
 				display: inline-block;
 				margin-right: 5px;
 				vertical-align: middle;
+				@include min(xl){
+					width: fw(23);
+					height: fw(23);
+					margin-right: fw(5);
+				}
 				@include max(sm){
 					width: vw(21);
 					height: vw(21);
@@ -1001,6 +1307,9 @@ body {
 	.container{
 		position: relative;
 		padding: 65px 0 65px;
+		@include min(xl){
+			padding: fw(65) 0 fw(65);
+		}
 		@include max(sm){
 			padding: vw(30) vw(5);
 		}
@@ -1024,10 +1333,22 @@ body {
 		padding: 4px;
 		display: flex;
 		flex-direction: column;
+		@include min(xl){
+			width: fw(462);
+			border-radius: fw(5) fw(5) fw(20) fw(20);
+			margin: 0 fw(35);
+			padding: fw(4);
+		}
 		@include max(md){
 			margin: 0 30px 70px;
 			&:last-child{
 				margin-bottom: 0;
+			}
+			@include min(xl){
+				margin: 0 fw(30) fw(70);
+				&:last-child{
+					margin-bottom: 0;
+				}
 			}
 		}
 		@include max(sm){
@@ -1044,6 +1365,9 @@ body {
 			flex-grow: 1;
 			display: flex;
 			flex-direction: column;
+			@include min(xl){
+				border-radius: fw(5) fw(5) fw(20) fw(20);
+			}
 		}
 		&-title{
 			width: 321px;
@@ -1061,6 +1385,13 @@ body {
 			box-shadow: 0 5px 0 #233448;
 			text-align: center;
 			margin: -7px auto 0;
+			@include min(xl){
+				width: fw(321);
+				height: fw(89);
+				border-radius: fw(5) fw(5) fw(20) fw(20);
+				font-size: 29px;
+				margin: fw(-7) auto 0;
+			}
 			@include max(sm){
 				width: vw(240);
 				height: vw(70);
@@ -1072,6 +1403,9 @@ body {
 			flex-grow: 1;
 			display: flex;
 			flex-direction: column;
+			@include min(xl){
+				padding: fw(66) fw(63) fw(50);
+			}
 			@include max(sm){
 				padding: vw(35) vw(20) vw(40);
 			}
@@ -1083,6 +1417,10 @@ body {
 			color: $blue;
 			font-weight: 500;
 			display: none;
+			@include min(xl){
+				padding: fw(60) 0;
+				font-size: fw(35);
+			}
 			@include max(sm){
 				padding: vw(30) 0;
 				font-size: vw(32);
@@ -1097,6 +1435,12 @@ body {
 			left: 57px;
 			top: -40px;
 			z-index: -1;
+			@include min(xl){
+				width: fw(282);
+				height: fw(282);
+				left: fw(57);
+				top: fw(-40);
+			}
 			@include max(sm){
 				width: vw(130);
 				height: vw(130);
@@ -1110,6 +1454,12 @@ body {
 			right: -35px;
 			bottom: -144px;
 			z-index: 1;
+			@include min(xl){
+				width: fw(298);
+				height: fw(298);
+				right: fw(-35);
+				bottom: fw(-144);
+			}
 			@include max(sm){
 				width: vw(140);
 				height: vw(140);
@@ -1127,6 +1477,9 @@ body {
 		position: relative;
 		+.form__input{
 			margin-top: 31px;
+			@include min(xl){
+				margin-top: fw(31);
+			}
 			@include max(sm){
 				margin-top: vw(20);
 			}
@@ -1153,6 +1506,12 @@ body {
 			user-select: none;
 			transition: 0.2s ease;
 			transform-origin: left top;
+			@include min(xl){
+				height: fw(80);
+				font-size: fw(29);
+				padding-left: fw(30);
+				padding-right: fw(30);
+			}
 			@include max(sm){
 				height: vw(60);
 				font-size: vw(19);
@@ -1175,7 +1534,12 @@ body {
 			color: $blue;
 			outline: none;
 			padding-left: 30px;
-
+			@include min(xl){
+				height: fw(80);
+				border-radius: fw(15);
+				font-size: fw(29);
+				padding-left: fw(30);
+			}
 			@include max(sm){
 				border-radius: vw(15);
 				height: vw(60);
@@ -1194,6 +1558,10 @@ body {
 					transform: scale(0.7);
 					top: -2px;
 					color: $blue;
+					@include min(xl){
+						height: fw(20);
+						top: fw(-2);
+					}
 					@include max(sm){
 						height: vw(20);
 						top: vw(-2);
@@ -1207,6 +1575,9 @@ body {
 	&__row{
 		margin-top: 33px;
 		text-align: center;
+		@include min(xl){
+			margin-top: fw(33);
+		}
 		@include max(sm){
 			margin-top: vw(30);
 		}
@@ -1230,6 +1601,11 @@ body {
 		cursor: pointer;
 		border: none;
 		outline: none;
+		@include min(xl){
+			border-radius: fw(15);
+			font-size: fw(23);
+			padding: fw(19);
+		}
 		@include max(sm){
 			border-radius: vw(15);
 			font-size: vw(21);
@@ -1254,6 +1630,9 @@ body {
 		flex-grow: 1;
 		padding: 10px 20px 0;
 		display: none;
+		@include min(xl){
+			padding: fw(10) fw(20) 0;
+		}
 		@include max(sm){
 			padding: vw(10) vw(10) 0;
 		}
@@ -1267,6 +1646,10 @@ body {
 		font-weight: 400;
 		line-height: 1;
 		margin-bottom: 19px;
+		@include min(xl){
+			font-size: fw(29);
+			margin-bottom: fw(19);
+		}
 		@include max(sm){
 			font-size: vw(24);
 			margin-bottom: vw(18);
@@ -1279,6 +1662,9 @@ body {
 		cursor: pointer;
 		+.quiz__radio{
 			margin-top: 17px;
+			@include min(xl){
+				margin-top: fw(17);
+			}
 			@include max(sm){
 				margin-top: vw(17);
 			}
@@ -1291,6 +1677,11 @@ body {
 			background-color: #ffffff;
 			border-radius: 50%;
 			margin-right: 17px;
+			@include min(xl){
+				width: fw(23);
+				height: fw(23);
+				margin-right: fw(17);
+			}
 			@include max(sm){
 				width: vw(20);
 				height: vw(20);
@@ -1302,6 +1693,9 @@ body {
 			font-size: 23px;
 			font-weight: 400;
 			line-height: 1;
+			@include min(xl){
+				font-size: fw(23);
+			}
 			@include max(sm){
 				font-size: vw(19);
 			}
@@ -1325,6 +1719,10 @@ body {
 		display: flex;
 		justify-content: flex-end;
 		padding: 0 3px;
+		@include min(xl){
+			margin-top: fw(33);
+			padding: 0 fw(3);
+		}
 		@include max(sm){
 			margin-top: vw(30);
 			padding: 0 vw(3);
@@ -1342,6 +1740,10 @@ body {
 			box-shadow: 0 3px 0 $greenBtn2;
 			border: none;
 			border-radius: 50%;
+			@include min(xl){
+				width: fw(61);
+				height: fw(61);
+			}
 			@include max(sm){
 				width: vw(60);
 				height: vw(60);
@@ -1365,6 +1767,11 @@ body {
 		align-items: center;
 		font-size: 23px;
 		line-height: 23.85px;
+		@include min(xl){
+			padding-top: fw(34);
+			font-size: fw(23);
+			line-height: fw(23.85);
+		}
 		@include max(sm){
 			padding-top: vw(25);
 			font-size: vw(19);
@@ -1375,6 +1782,9 @@ body {
 		}
 		&-title{
 			margin-bottom: 10px;
+			@include min(xl){
+				margin-bottom: fw(10);
+			}
 			@include max(sm){
 				margin-bottom: vw(10);
 			}
@@ -1388,6 +1798,9 @@ body {
 			z-index: 2;
 			margin-left: auto;
 			margin-right: auto;
+			@include min(xl){
+				font-size: fw(41);
+			}
 			@include max(sm){
 				font-size: vw(34);
 			}
@@ -1401,10 +1814,16 @@ body {
 				bottom: 0;
 				left: 0;
 				z-index: -1;
+				@include min(xl){
+					height: fw(2);
+				}
 			}
 		}
 		&-text{
 			margin-top: 25px;
+			@include min(xl){
+				margin-top: fw(25);
+			}
 			@include max(sm){
 				margin-top: vw(20);
 			}

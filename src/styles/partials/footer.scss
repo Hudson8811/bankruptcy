@@ -3,6 +3,10 @@
 	background: $blue;
 	padding: 78px 144px 62px;
 	color: #ffffff;
+	@include min(xl){
+		margin-top: fw(35);
+		padding: fw(78) fw(144) fw(62);
+	}
 	@include max(lg){
 		padding: 78px 30px 62px;
 	}
@@ -17,6 +21,9 @@
 		&-icon{
 			width: 39px;
 			flex-shrink: 0;
+			@include min(xl){
+				width: fw(39);
+			}
 			@include max(sm){
 				width: vw(30);
 			}
@@ -31,12 +38,19 @@
 		&-item{
 			font-size: 29px;
 			line-height: 27px;
+			@include min(xl){
+				font-size: fw(29);
+				line-height: fw(27);
+			}
 			@include max(sm){
 				font-size: vw(21);
 				line-height: vw(20);
 			}
 			+.footer__address-item{
 				margin-top: 23px;
+				@include min(xl){
+					margin-top: fw(23);
+				}
 				@include max(sm){
 					margin-top: vw(20);
 				}
@@ -51,12 +65,18 @@
 		margin-top: 77px;
 		display: flex;
 		align-items: flex-start;
+		@include min(xl){
+			margin-top: fw(77);
+		}
 		@include max(sm){
 			margin-top: vw(70);
 		}
 		&-icon{
 			width: 39px;
 			flex-shrink: 0;
+			@include min(xl){
+				width: fw(39);
+			}
 			@include max(sm){
 				width: vw(30);
 			}
@@ -66,6 +86,10 @@
 			font-size: 29px;
 			line-height: 27px;
 			font-weight: 500;
+			@include min(xl){
+				font-size: fw(29);
+				line-height: fw(27);
+			}
 			@include max(sm){
 				font-size: vw(21);
 				line-height: vw(20);
@@ -74,17 +98,26 @@
 		&-list{
 			display: flex;
 			margin-top: 15px;
+			@include min(xl){
+				margin-top: fw(15);
+			}
 			@include max(sm){
 				margin-top: vw(15);
 			}
 		}
 		&-item{
 			width: 42px;
+			@include min(xl){
+				width: fw(42);
+			}
 			@include max(sm){
 				width: vw(35);
 			}
 			+.footer__social-item{
 				margin-left: 20px;
+				@include min(xl){
+					margin-left: fw(20);
+				}
 				@include max(sm){
 					margin-left: vw(20);
 				}
@@ -112,7 +145,12 @@
 	transform: translateX(500px);
 	z-index: 10;
 	display: none;
-
+	@include min(xl){
+		bottom: fw(143);
+		width: fw(67);
+		height: fw(67);
+		transform: translateX(26.4vw);
+	}
 	@include max(lg){
 		transform: none;
 		left: auto;
