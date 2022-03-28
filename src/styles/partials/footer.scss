@@ -9,6 +9,7 @@
 	@include max(sm){
 		padding: vw(30) vw(10) vw(50);
 	}
+	.container{}
 	&__content{}
 	&__address{
 		display: flex;

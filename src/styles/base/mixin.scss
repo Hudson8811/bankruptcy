@@ -61,3 +61,7 @@
 @function vw($px) {
 	@return (($px/320) * 100) + vw;
 }
+
+@function fw($px) {
+	@return (($px/1920) * 100) + vw;
+}

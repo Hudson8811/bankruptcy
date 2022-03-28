@@ -6,13 +6,18 @@ body {
 	color: $textMainColor;
 }
 
+.wrapper{
+	width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+
+}
+
 .container{
 	width: 1380px;
-	margin: 0 auto;
 	max-width: 100%;
-	@include max(lg){
-		overflow: hidden;
-	}
+	margin: 0 auto;
+	
 }
 
 
@@ -34,18 +39,31 @@ body {
 	}
 	&__bg{
 		width: 100%;
-		padding-bottom: 89.57%;
+		height: 1193px;
 		position: absolute;
 		z-index: -1;
 		pointer-events: none;
 		left: 0;
 		top: 0;
-		background: url(../images/hero.jpg) center bottom no-repeat;
+		background: url(../images/1920.jpg) center top no-repeat;
 		background-size: cover;
 		box-sizing: border-box;
 		max-height: 1236px;
+		@include min(xl){
+			background-image: url(../images/2560.jpg);
+			height: auto;
+			padding-bottom: 62.13%;
+		}
+		@include min(xxl){
+			background-image: url(../images/3840.jpg);
+		}
+		@include max(lg){
+			height: auto;
+			padding-bottom: 86.45%;
+		}
 		@include max(sm){
 			background-image: url(../images/hero_mob2.jpg);
+			height: auto;
 			padding-bottom: 180.3%;
 		}
 	}
@@ -479,10 +497,15 @@ body {
 }
 
 .s4{
-	padding: 73px 0 75px;
 	position: relative;
-	@include max(sm){
-		padding: vw(30);
+
+
+	.container{
+		position: relative;
+		padding: 73px 0 75px;
+		@include max(sm){
+			padding: vw(30);
+		}
 	}
 	&__title{
 		color: $blue;
@@ -613,10 +636,15 @@ body {
 
 
 .s5{
-	padding: 76px 0 60px;
+
 	position: relative;
-	@include max(sm){
-		padding: vw(30) 0;
+
+	.container{
+		padding: 76px 0 60px;
+		position: relative;
+		@include max(sm){
+			padding: vw(30) 0;
+		}
 	}
 	&__title{
 		position: relative;
@@ -642,14 +670,16 @@ body {
 			content: "";
 			display: block;
 			background: #D4E8C7;
-			width: calc(100% - 229px);
+			width: 100vw;
 			height: 75px;
 			position: absolute;
 			z-index: -1;
-			right: 0;
+			left: 229px;
 			top: 19px;
 			@include max(sm){
 				width: 80%;
+				left: auto;
+				right: 0;
 				height: vw(40);
 				top: vw(10);
 			}
@@ -740,10 +770,13 @@ body {
 }
 
 .s6{
-	padding: 60px 0 69px;
-	position: relative;
-	@include max(sm){
-		padding: vw(30) 0;
+
+	.container{
+		padding: 60px 0 69px;
+		position: relative;
+		@include max(sm){
+			padding: vw(30) 0;
+		}
 	}
 	&__title{
 		position: relative;
@@ -769,14 +802,16 @@ body {
 			content: "";
 			display: block;
 			background: #D4E8C7;
-			width: calc(100% - 229px);
+			width: 100vw;
 			height: 75px;
 			position: absolute;
 			z-index: -1;
-			right: 0;
+			left: 229px;
 			top: 19px;
 			@include max(sm){
 				width: 80%;
+				left: auto;
+				right: 0;
 				height: vw(40);
 				top: vw(10);
 			}
@@ -962,10 +997,13 @@ body {
 }
 
 .s8{
-	position: relative;
-	padding: 65px 0 65px;
-	@include max(sm){
-		padding: vw(30) vw(5);
+
+	.container{
+		position: relative;
+		padding: 65px 0 65px;
+		@include max(sm){
+			padding: vw(30) vw(5);
+		}
 	}
 	&__flex{
 		display: flex;
